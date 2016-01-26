@@ -1,0 +1,18 @@
+{
+  "name": "juttle-s3-adapter",
+  "version": "0.1.0",
+  "description": "An S3 adapter for Juttle",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "juttle",
+    "s3"
+  ],
+  "author": "davidvgalbraith",
+  "license": "ISC"
+}
