@@ -2,7 +2,7 @@
   "name": "juttle-s3-adapter",
   "version": "0.1.0",
   "description": "An S3 adapter for Juttle",
-  "main": "index.js",
+  "main": "lib/index.js",
   "directories": {
     "test": "test"
   },
@@ -14,5 +14,12 @@
     "s3"
   ],
   "author": "davidvgalbraith",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.2.32",
+    "bluebird": "^3.1.5"
+  },
+  "devDependencies": {
+    "chai": "^3.4.1"
+  }
 }
