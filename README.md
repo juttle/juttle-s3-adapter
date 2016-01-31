@@ -1,6 +1,6 @@
 # Juttle S3 Adapter
 
-[![Build Status](https://travis-ci.org/juttle/juttle-s3-adapter.svg)](https://travis-ci.org/juttle/s3-adapter)
+[![Build Status](https://travis-ci.org/juttle/juttle-s3-adapter.svg?branch=master)
 
 The Juttle S3 Adapter enables interaction with [S3](https://github.com/juttle/s3).
 
