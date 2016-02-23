@@ -7,7 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "eslint **/*.js && node_modules/.bin/istanbul cover node_modules/.bin/_mocha",
+    "check-coverage": "node_modules/.bin/istanbul check-coverage"
   },
   "keywords": [
     "juttle",
@@ -17,12 +18,15 @@
   "license": "ISC",
   "dependencies": {
     "aws-sdk": "^2.2.32",
-    "bluebird": "^3.1.5"
+    "bluebird": "^3.1.5",
+    "underscore": "^1.8.3"
   },
   "peerDependencies": {
     "juttle": ">=0.4.0"
   },
   "devDependencies": {
-    "chai": "^3.4.1"
+    "chai": "^3.4.1",
+    "mocha": "^2.3.4",
+    "istanbul": "^0.4.2"
   }
 }
