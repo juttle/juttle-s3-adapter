@@ -18,7 +18,7 @@ var client = Promise.promisifyAll(new AWS.S3(config));
 
 var S3Adapter = require('../lib')(config);
 Juttle.adapters.register(S3Adapter.name, S3Adapter);
-var test_bucket = 's3.adapter.test';
+var test_bucket = 's3.adapter.test' + Math.random();
 
 describe('s3 source', function() {
     this.timeout(300000);
