@@ -4,25 +4,25 @@ var util = require('util');
 var path = require('path');
 var expect = require('chai').expect;
 
-var Juttle = require('juttle/lib/runtime').Juttle;
-var juttle_test_utils = require('juttle/test/runtime/specs/juttle-test-utils');
+var juttle_test_utils = require('juttle/test').utils;
 var check_juttle = juttle_test_utils.check_juttle;
 
 var config = {
     accessKey: process.env.AWS_ACCESS_KEY_ID,
     secretKey: process.env.AWS_SECRET_ACCESS_KEY,
-    region: 'us-west-2'
+    region: 'us-west-2',
+    path: path.resolve(__dirname, '..')
 };
+
+juttle_test_utils.configureAdapter({
+    s3: config
+});
 
 var client = Promise.promisifyAll(new AWS.S3(config));
 
-var S3Adapter = require('../lib')(config);
-Juttle.adapters.register(S3Adapter.name, S3Adapter);
 var test_bucket = 's3.adapter.test' + Math.random();
 
-describe('s3 source', function() {
-    this.timeout(300000);
-
+juttle_test_utils.withAdapterAPI(function() {
     before(function() {
         return client.createBucketAsync({Bucket: test_bucket});
     });
