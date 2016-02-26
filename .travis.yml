@@ -1,7 +1,7 @@
 language: node_js
 
 before_install:
-    - npm install juttle@0.4.x
+    - npm install juttle@0.5.x
 
 node_js:
     - '4.2'
